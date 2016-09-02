@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A3516DD9166336D042488B2 /* Pods_ZaragozaBusInfoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACEF0349A85EFCBBE6916C0 /* Pods_ZaragozaBusInfoTests.framework */; };
 		2C6B94731D7A1B1400B8E0E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6B94721D7A1B1400B8E0E0 /* AppDelegate.swift */; };
 		2C6B94751D7A1B1400B8E0E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6B94741D7A1B1400B8E0E0 /* ViewController.swift */; };
 		2C6B94781D7A1B1400B8E0E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6B94761D7A1B1400B8E0E0 /* Main.storyboard */; };
 		2C6B947A1D7A1B1400B8E0E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C6B94791D7A1B1400B8E0E0 /* Assets.xcassets */; };
 		2C6B947D1D7A1B1400B8E0E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6B947B1D7A1B1400B8E0E0 /* LaunchScreen.storyboard */; };
 		2C6B94881D7A1B1400B8E0E0 /* ZaragozaBusInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6B94871D7A1B1400B8E0E0 /* ZaragozaBusInfoTests.swift */; };
+		D0C6547D2AD0BC2F9AD8DBCA /* Pods_ZaragozaBusInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0E5D3071B1A99A65009533 /* Pods_ZaragozaBusInfo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0ACEF0349A85EFCBBE6916C0 /* Pods_ZaragozaBusInfoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZaragozaBusInfoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D0E5D3071B1A99A65009533 /* Pods_ZaragozaBusInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZaragozaBusInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6B946F1D7A1B1400B8E0E0 /* ZaragozaBusInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZaragozaBusInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6B94721D7A1B1400B8E0E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C6B94741D7A1B1400B8E0E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		2C6B94831D7A1B1400B8E0E0 /* ZaragozaBusInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZaragozaBusInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6B94871D7A1B1400B8E0E0 /* ZaragozaBusInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZaragozaBusInfoTests.swift; sourceTree = "<group>"; };
 		2C6B94891D7A1B1400B8E0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34DED598B777BE21720F26A4 /* Pods-ZaragozaBusInfoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaragozaBusInfoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZaragozaBusInfoTests/Pods-ZaragozaBusInfoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		47922DDC72EAAEB877D1F708 /* Pods-ZaragozaBusInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaragozaBusInfo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZaragozaBusInfo/Pods-ZaragozaBusInfo.release.xcconfig"; sourceTree = "<group>"; };
+		6621676838C51202E2D189B7 /* Pods-ZaragozaBusInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaragozaBusInfo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZaragozaBusInfo/Pods-ZaragozaBusInfo.debug.xcconfig"; sourceTree = "<group>"; };
+		CF6B4833A535AB25C205D1FB /* Pods-ZaragozaBusInfoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaragozaBusInfoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZaragozaBusInfoTests/Pods-ZaragozaBusInfoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C6547D2AD0BC2F9AD8DBCA /* Pods_ZaragozaBusInfo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A3516DD9166336D042488B2 /* Pods_ZaragozaBusInfoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +72,8 @@
 				2C6B94711D7A1B1400B8E0E0 /* ZaragozaBusInfo */,
 				2C6B94861D7A1B1400B8E0E0 /* ZaragozaBusInfoTests */,
 				2C6B94701D7A1B1400B8E0E0 /* Products */,
+				6232388C34F5354F12CC3493 /* Pods */,
+				8F45E294A2DA664489F02840 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +108,26 @@
 			path = ZaragozaBusInfoTests;
 			sourceTree = "<group>";
 		};
+		6232388C34F5354F12CC3493 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6621676838C51202E2D189B7 /* Pods-ZaragozaBusInfo.debug.xcconfig */,
+				47922DDC72EAAEB877D1F708 /* Pods-ZaragozaBusInfo.release.xcconfig */,
+				34DED598B777BE21720F26A4 /* Pods-ZaragozaBusInfoTests.debug.xcconfig */,
+				CF6B4833A535AB25C205D1FB /* Pods-ZaragozaBusInfoTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8F45E294A2DA664489F02840 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D0E5D3071B1A99A65009533 /* Pods_ZaragozaBusInfo.framework */,
+				0ACEF0349A85EFCBBE6916C0 /* Pods_ZaragozaBusInfoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C6B948C1D7A1B1400B8E0E0 /* Build configuration list for PBXNativeTarget "ZaragozaBusInfo" */;
 			buildPhases = (
+				FFD0A926FA2B9F2BB928C81A /* [CP] Check Pods Manifest.lock */,
 				2C6B946B1D7A1B1400B8E0E0 /* Sources */,
 				2C6B946C1D7A1B1400B8E0E0 /* Frameworks */,
 				2C6B946D1D7A1B1400B8E0E0 /* Resources */,
+				EBABD826AAA6D548C6EE25E2 /* [CP] Embed Pods Frameworks */,
+				1033991344D1B0689F0149DB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +155,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2C6B948F1D7A1B1400B8E0E0 /* Build configuration list for PBXNativeTarget "ZaragozaBusInfoTests" */;
 			buildPhases = (
+				A8711DC5ECE5AEC285463632 /* [CP] Check Pods Manifest.lock */,
 				2C6B947F1D7A1B1400B8E0E0 /* Sources */,
 				2C6B94801D7A1B1400B8E0E0 /* Frameworks */,
 				2C6B94811D7A1B1400B8E0E0 /* Resources */,
+				CA108A11964C466DED252AD9 /* [CP] Embed Pods Frameworks */,
+				9E05803CEAEB7DEF6B0B0A3F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,6 +229,99 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1033991344D1B0689F0149DB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZaragozaBusInfo/Pods-ZaragozaBusInfo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E05803CEAEB7DEF6B0B0A3F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZaragozaBusInfoTests/Pods-ZaragozaBusInfoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A8711DC5ECE5AEC285463632 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CA108A11964C466DED252AD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZaragozaBusInfoTests/Pods-ZaragozaBusInfoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBABD826AAA6D548C6EE25E2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ZaragozaBusInfo/Pods-ZaragozaBusInfo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFD0A926FA2B9F2BB928C81A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C6B946B1D7A1B1400B8E0E0 /* Sources */ = {
@@ -327,6 +458,7 @@
 		};
 		2C6B948D1D7A1B1400B8E0E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6621676838C51202E2D189B7 /* Pods-ZaragozaBusInfo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZaragozaBusInfo/Info.plist;
@@ -338,6 +470,7 @@
 		};
 		2C6B948E1D7A1B1400B8E0E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47922DDC72EAAEB877D1F708 /* Pods-ZaragozaBusInfo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZaragozaBusInfo/Info.plist;
@@ -349,6 +482,7 @@
 		};
 		2C6B94901D7A1B1400B8E0E0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34DED598B777BE21720F26A4 /* Pods-ZaragozaBusInfoTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ZaragozaBusInfoTests/Info.plist;
@@ -361,6 +495,7 @@
 		};
 		2C6B94911D7A1B1400B8E0E0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF6B4833A535AB25C205D1FB /* Pods-ZaragozaBusInfoTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ZaragozaBusInfoTests/Info.plist;
@@ -390,6 +525,7 @@
 				2C6B948E1D7A1B1400B8E0E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C6B948F1D7A1B1400B8E0E0 /* Build configuration list for PBXNativeTarget "ZaragozaBusInfoTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +534,7 @@
 				2C6B94911D7A1B1400B8E0E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
