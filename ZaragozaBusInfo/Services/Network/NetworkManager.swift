@@ -34,7 +34,7 @@ struct NetworkManager {
     /* in general I decided to use the "Swift 3.0 method's sign's convetion
      as described in this post: https://swift.org/documentation/api-design-guidelines/
      */
-    static func getBusInfoList(callback: ([MappableBusInfo]?) -> Void) {
+    static func busInfoList(callback: ([MappableBusInfo]?) -> Void) {
         Alamofire.request(.GET, HTTPEndPoints.busInfoListURL).responseObject { (response: Response<BusInfoLocationsResponse, NSError> ) -> Void in
             let busInfoLocationsResponse = response.result.value
             guard busInfoLocationsResponse?.locations?.count > 0 else {
@@ -45,7 +45,7 @@ struct NetworkManager {
         }
     }
     
-    static func getBusStopInfo(id: String, callback: ([MappableBusStopEstimate]?) -> Void) {
+    static func busStopInfo(id: String, callback: ([MappableBusStopEstimate]?) -> Void) {
         Alamofire.request(.GET, HTTPEndPoints.busInfoListURL).responseObject { (response: Response<MappableBusStopInfoResponse, NSError> ) -> Void in
             let busStopInfoEstimatesResponse = response.result.value
             guard busStopInfoEstimatesResponse?.estimates?.count > 0 else {
@@ -56,7 +56,7 @@ struct NetworkManager {
         }
     }
     
-    static func getBusStopImage(lat: Double, lon: Double ,callback: (UIImage?)) -> Void {
+    static func busStopImage(lat: Double, lon: Double ,callback: (UIImage?)) -> Void {
         Alamofire.request(.GET, HTTPEndPoints.HTTPGoogleMaps.googleMapsImage(lat, lon: lon))
             .responseImage { response in
                 debugPrint(response)
