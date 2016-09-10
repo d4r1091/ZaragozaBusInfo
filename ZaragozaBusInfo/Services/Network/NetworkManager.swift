@@ -24,7 +24,7 @@ struct NetworkManager {
         private struct HTTPGoogleMaps {
             static let googleMapsBaseURL = "http://maps.googleapis.com/"
             static let googleMapsEndPoint = "maps/api/staticmap?center="
-            static let googleMapsParameters = "&zoom=15&size=200x 120&sensor=true"
+            static let googleMapsParameters = "&zoom=15&size=200x120&sensor=true"
             static func googleMapsImage(lat lat: Double, lon: Double) -> String {
                 return HTTPGoogleMaps.googleMapsBaseURL+googleMapsEndPoint+String(lat)+","+String(lon)+googleMapsParameters
             }
@@ -45,7 +45,11 @@ struct NetworkManager {
         }
     }
     
-    static func busInfoList(id: String, callback: ([MappableBusInfo]?) -> Void) {
+    static func busInfoList(id id: String?, callback: ([MappableBusInfo]?) -> Void) {
+        guard id?.characters.count > 0 else {
+            callback(nil)
+            return
+        }
         Alamofire.request(.GET, HTTPEndPoints.busInfoListURL).responseObject { (response: Response<MappableBusInfoResponse, NSError> ) -> Void in
             let busInfoEstimatesResponse = response.result.value
             guard busInfoEstimatesResponse?.estimates?.count > 0 else {

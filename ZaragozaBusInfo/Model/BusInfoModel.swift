@@ -11,8 +11,32 @@ import UIKit
 
 struct BusInfoModel {
     
-    private(set) var line: String?
-    private(set) var direction: String?
-    private(set) var estimate: Int?
+    private(set) var line: String? {
+        didSet {
+            if let line = line {
+                self.line = line
+            } else {
+                self.line = "nd"
+            }
+        }
+    }
+    private(set) var direction: String? {
+        didSet {
+            if let direction = direction {
+                self.direction = direction
+            } else {
+                self.direction = "nd"
+            }
+        }
+    }
+    private(set) var estimate: String? {
+        didSet {
+            if let estimate = estimate {
+                self.estimate = "in \(estimate)'"
+            } else {
+                self.estimate = "nd"
+            }
+        }
+    }
     
 }

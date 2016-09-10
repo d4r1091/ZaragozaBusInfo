@@ -27,6 +27,7 @@ class BusInfosTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.estimatedRowHeight = 160
         tableView.rowHeight = UITableViewAutomaticDimension
+        fetchBusStopList()
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,7 +39,7 @@ class BusInfosTableViewController: UITableViewController {
     
     func fetchBusStopList() {
         let progressHUD = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        progressHUD.label.text = "fetching users list...";
+        progressHUD.label.text = "fetching bus info list...";
         BusInfoController.busStopInfoList { (busStopList: [BusStopInfoModel]?) in
             self.fillArray(busStopList)
             dispatch_async(dispatch_get_main_queue(),{
@@ -59,21 +60,30 @@ class BusInfosTableViewController: UITableViewController {
 // MARK: - Table View Data Source & Delegate
 
 extension BusInfosTableViewController {
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return busStopList.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("busStopIdentifier", forIndexPath: indexPath) as! BusInfoTableViewCell
         
         // Configure the cell...
-        
+        let aBusStop = busStopList[indexPath.row]
+        cell.configureCellViews(aBusStop.id,
+                                name: aBusStop.title)
+        if  let url = BusInfoController.busStopImageURL(lat: aBusStop.lat, lon: aBusStop.lon){
+            cell.stopImageView.af_setImageWithURL(url)
+        }
         return cell
     }
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 160
+    }
     
 }

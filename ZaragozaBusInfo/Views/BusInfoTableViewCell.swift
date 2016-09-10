@@ -10,6 +10,7 @@ import UIKit
 
 class BusInfoTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var stopImageView: UIImageView!
     @IBOutlet weak var number: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var busInfo: UILabel!
@@ -41,18 +42,21 @@ class BusInfoTableViewCell: UITableViewCell {
     // MARK: Fill Outlets
     
     func configureCellViews(number: String?,
-                            name: String?,
-                            busses:[String]?) {
+                            name: String?) {
         self.number.text = number
         self.name.text = name
+    }
+    
+    func updatedBussesInfo(list busses: [String]?) {
         guard busses?.count > 0 else {
             self.stackViewHeight.constant = 0
             return
         }
-        
         for aString in busses! {
-            
-            
+            let label = UILabel()
+            label.text = aString
+            label.textAlignment = NSTextAlignment.Left
+            bussesStackView.addArrangedSubview(label)
         }
     }
 }

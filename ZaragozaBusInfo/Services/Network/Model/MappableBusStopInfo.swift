@@ -44,6 +44,7 @@ final class MappableBusStopInfo: Mappable {
         id <- map["id"]
         title <- map["title"]
         lat <- map["lat"]
+        lon <- map["lon"]
         lines <- map["lines"]
         subtitle <- map["subtitle"]
     }
