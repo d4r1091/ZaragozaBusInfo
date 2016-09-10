@@ -31,8 +31,8 @@ class BusInfoTableViewCell: UITableViewCell {
     
     func configureCellViews(number: String?,
                             name: String?) {
-        self.number.text = number
-        self.name.text = name
+        self.number.text = number ?? "nd"
+        self.name.text = name ?? "nd"
     }
     
     func updatedBussesInfo(list busses: [String]?) {
