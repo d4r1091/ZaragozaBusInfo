@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+struct BusInfoModel {
+    
+    private(set) var id: String?
+    private(set) var title: String?
+    private(set) var lat: Double?
+    private(set) var lon: Double?
+    private(set) var lines: [String]?
+    private(set) var subtitle: String?
+    
+}
