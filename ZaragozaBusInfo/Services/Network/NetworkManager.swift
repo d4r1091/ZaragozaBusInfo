@@ -34,25 +34,25 @@ struct NetworkManager {
     /* in general I decided to use the "Swift 3.0 method's sign's convetion
      as described in this post: https://swift.org/documentation/api-design-guidelines/
      */
-    static func busInfoList(callback: ([MappableBusInfo]?) -> Void) {
-        Alamofire.request(.GET, HTTPEndPoints.busInfoListURL).responseObject { (response: Response<MappableBusInfoResponse, NSError> ) -> Void in
-            let busInfoLocationsResponse = response.result.value
-            guard busInfoLocationsResponse?.estimates?.count > 0 else {
+    static func busStopInfoList(callback: ([MappableBusStopInfo]?) -> Void) {
+        Alamofire.request(.GET, HTTPEndPoints.busInfoListURL).responseObject { (response: Response<MappableBusInfoStopLocationsResponse, NSError> ) -> Void in
+            let busStopInfoLocationsResponse = response.result.value
+            guard busStopInfoLocationsResponse?.locations?.count > 0 else {
                 callback(nil)
                 return
             }
-            callback(busInfoLocationsResponse?.estimates)
+            callback(busStopInfoLocationsResponse?.locations)
         }
     }
     
-    static func busStopInfo(id: String, callback: ([MappableBusStopInfo]?) -> Void) {
-        Alamofire.request(.GET, HTTPEndPoints.busInfoListURL).responseObject { (response: Response<BusInfoStopLocationsResponse, NSError> ) -> Void in
-            let busStopInfoEstimatesResponse = response.result.value
-            guard busStopInfoEstimatesResponse?.locations?.count > 0 else {
+    static func busInfoList(id: String, callback: ([MappableBusInfo]?) -> Void) {
+        Alamofire.request(.GET, HTTPEndPoints.busInfoListURL).responseObject { (response: Response<MappableBusInfoResponse, NSError> ) -> Void in
+            let busInfoEstimatesResponse = response.result.value
+            guard busInfoEstimatesResponse?.estimates?.count > 0 else {
                 callback(nil)
                 return
             }
-            callback(busStopInfoEstimatesResponse?.locations)
+            callback(busInfoEstimatesResponse?.estimates)
         }
     }
     

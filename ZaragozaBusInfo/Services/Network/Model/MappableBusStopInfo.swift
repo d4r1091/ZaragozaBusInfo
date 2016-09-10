@@ -49,7 +49,7 @@ final class MappableBusStopInfo: Mappable {
     }
 }
 
-final class BusInfoStopLocationsResponse: Mappable {
+final class MappableBusInfoStopLocationsResponse: Mappable {
     var locations: [MappableBusStopInfo]?
     
     init?(_ map: Map) {
