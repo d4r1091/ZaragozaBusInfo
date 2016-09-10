@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import AlamofireObjectMapper
+import AlamofireImage
 
 struct NetworkManager {
     
@@ -19,14 +20,20 @@ struct NetworkManager {
          different from eachother
          */
         static let busInfoListURL = "http://api.dndzgz.com/services/bus"
-        static let googleMapsImageURL = "http://maps.googleapis.com/maps/api/staticmap"
         
+        private struct HTTPGoogleMaps {
+            static let googleMapsBaseURL = "http://maps.googleapis.com/"
+            static let googleMapsEndPoint = "maps/api/staticmap?center="
+            static let googleMapsParameters = "&zoom=15&size=200x 120&sensor=true"
+            static func googleMapsImage(lat: Double, lon: Double) -> String {
+                return HTTPGoogleMaps.googleMapsBaseURL+googleMapsEndPoint+String(lat)+","+String(lon)+googleMapsParameters
+            }
+        }
     }
     
     /* in general I decided to use the "Swift 3.0 method's sign's convetion
      as described in this post: https://swift.org/documentation/api-design-guidelines/
      */
-    
     static func getBusInfoList(callback: ([MappableBusInfo]?) -> Void) {
         Alamofire.request(.GET, HTTPEndPoints.busInfoListURL).responseObject { (response: Response<BusInfoLocationsResponse, NSError> ) -> Void in
             let busInfoLocationsResponse = response.result.value
@@ -49,7 +56,16 @@ struct NetworkManager {
         }
     }
     
-    static func getBusStopImage(callback: (UIImage?)) -> Void {
-        
+    static func getBusStopImage(lat: Double, lon: Double ,callback: (UIImage?)) -> Void {
+        Alamofire.request(.GET, HTTPEndPoints.HTTPGoogleMaps.googleMapsImage(lat, lon: lon))
+            .responseImage { response in
+                debugPrint(response)
+                debugPrint(response.request)
+                debugPrint(response.response)
+                debugPrint(response.result)
+                if let image = response.result.value {
+                    debugPrint("image downloaded: \(image)")
+                }
+        }
     }
 }
