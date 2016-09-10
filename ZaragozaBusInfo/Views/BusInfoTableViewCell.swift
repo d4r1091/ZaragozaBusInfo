@@ -14,19 +14,7 @@ class BusInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var number: UILabel!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var busInfo: UILabel!
-    @IBOutlet weak var bussesStackView: UIStackView! {
-        didSet {
-            bussesStackView.axis = .Vertical;
-            bussesStackView.distribution = .EqualSpacing;
-            bussesStackView.alignment = .Center;
-            bussesStackView.spacing = 5;
-            bussesStackView.translatesAutoresizingMaskIntoConstraints = false
-            bussesStackView.setContentCompressionResistancePriority(UILayoutPriorityRequired,
-                                                                    forAxis: .Vertical)
-            
-        }
-    }
-    @IBOutlet weak var stackViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var bussesTextView: UITextView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -49,14 +37,16 @@ class BusInfoTableViewCell: UITableViewCell {
     
     func updatedBussesInfo(list busses: [String]?) {
         guard busses?.count > 0 else {
-            self.stackViewHeight.constant = 0
+            bussesTextView.text = "service temporarily unavailable"
             return
         }
-        for aString in busses! {
-            let label = UILabel()
-            label.text = aString
-            label.textAlignment = NSTextAlignment.Left
-            bussesStackView.addArrangedSubview(label)
+        var completeString = busses![0]
+        for (index, element) in (busses?.enumerate())! {
+            if index == 0 {
+                continue
+            }
+            completeString = completeString + "\n" + element
         }
+        bussesTextView.text = completeString
     }
 }

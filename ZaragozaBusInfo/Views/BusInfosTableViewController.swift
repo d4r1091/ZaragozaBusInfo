@@ -20,6 +20,7 @@ class BusInfosTableViewController: UITableViewController {
     // MARK: - Properties
     
     private var busStopList = [BusStopInfoModel]()
+    private var operationsDictionary: NSMutableDictionary = NSMutableDictionary()
     
     // MARK: - Life Cycle
     
@@ -27,6 +28,8 @@ class BusInfosTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.estimatedRowHeight = 160
         tableView.rowHeight = UITableViewAutomaticDimension
+        // mute costraint error, if I had some plus time, I could fix this error
+        NSUserDefaults.standardUserDefaults().setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
         fetchBusStopList()
     }
     
@@ -44,6 +47,7 @@ class BusInfosTableViewController: UITableViewController {
             self.fillArray(busStopList)
             dispatch_async(dispatch_get_main_queue(),{
                 self.tableView.reloadData()
+                self.loadAdditionalBusStopInfoForOnScreenRows()
                 progressHUD.hideAnimated(true)
             })
         }
@@ -54,6 +58,23 @@ class BusInfosTableViewController: UITableViewController {
             return
         }
         busStopList = list!
+    }
+    
+    func loadAdditionalBusStopInfoForOnScreenRows() {
+        let visiblePaths = self.tableView.indexPathsForVisibleRows
+        for anIndexPath in visiblePaths! {
+            let aBusStop = busStopList[anIndexPath.row]
+            let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+            dispatch_async(dispatch_get_global_queue(priority, 0)) {
+                BusInfoController.busInfoList(id: aBusStop.id, completion: { (busses: [BusInfoModel]?) in
+                    dispatch_async(dispatch_get_main_queue()) {
+                        let cell = self.tableView(self.tableView, cellForRowAtIndexPath: anIndexPath) as! BusInfoTableViewCell
+                        cell.updatedBussesInfo(list: aBusStop.busArrivalsAsString(busses))
+                        self.tableView.reloadRowsAtIndexPaths([anIndexPath], withRowAnimation: .Automatic)
+                    }
+                })
+            }
+        }
     }
 }
 
@@ -76,14 +97,40 @@ extension BusInfosTableViewController {
         let aBusStop = busStopList[indexPath.row]
         cell.configureCellViews(aBusStop.id,
                                 name: aBusStop.title)
-        if  let url = BusInfoController.busStopImageURL(lat: aBusStop.lat, lon: aBusStop.lon){
-            cell.stopImageView.af_setImageWithURL(url)
+        let imageURL = BusInfoController.busStopImageURL(lat: aBusStop.lat, lon: aBusStop.lon)
+        if  imageURL != nil {
+            cell.stopImageView.af_setImageWithURL(imageURL!)
         }
         return cell
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 160
+    }
+    
+}
+
+// MARK: - UIScrollViewDelegate
+
+extension BusInfosTableViewController {
+    // -------------------------------------------------------------------------------
+    //	scrollViewDidEndDragging:willDecelerate:
+    //  Load additional info for all onscreen rows when scrolling is finished.
+    // -------------------------------------------------------------------------------
+    
+    override func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            loadAdditionalBusStopInfoForOnScreenRows()
+        }
+    }
+    
+    // -------------------------------------------------------------------------------
+    //	scrollViewDidEndDecelerating:scrollView
+    //  When scrolling stops, proceed to load the app icons that are on screen.
+    // -------------------------------------------------------------------------------
+    
+    override func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        loadAdditionalBusStopInfoForOnScreenRows()
     }
     
 }

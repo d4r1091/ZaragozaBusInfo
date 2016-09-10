@@ -16,7 +16,7 @@ struct BusStopInfoModel {
     private(set) var lon: Double?
     private(set) var stopImageURL: String?
     
-    func busArrivalsAsString(list: [BusInfoModel]?) -> [String] {
+    func busArrivalsAsString(list: [BusInfoModel]?) -> [String]? {
         guard list != nil && list?.count > 0 else {
             return []
         }

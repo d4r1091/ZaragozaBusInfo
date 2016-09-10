@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rAd-qS-gbb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QT7-QH-yWF">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Bus Infos Table View Controller-->
+        <!--Zaragoza's BusStop-->
         <scene sceneID="WcA-JD-qJF">
             <objects>
                 <tableViewController id="rAd-qS-gbb" customClass="BusInfosTableViewController" customModule="ZaragozaBusInfo" customModuleProvider="target" sceneMemberID="viewController">
@@ -15,8 +15,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="busStopIdentifier" rowHeight="160" id="ER9-GX-l3Q" customClass="BusInfoTableViewCell" customModule="ZaragozaBusInfo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="160"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="busStopIdentifier" rowHeight="160" id="ER9-GX-l3Q" customClass="BusInfoTableViewCell" customModule="ZaragozaBusInfo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="160"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ER9-GX-l3Q" id="T4h-98-hOA">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="159"/>
@@ -28,7 +28,7 @@
                                                 <constraint firstAttribute="width" constant="148" id="er5-jH-gRU"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYc-y6-D08">
@@ -37,7 +37,7 @@
                                                 <constraint firstAttribute="width" constant="50" id="7pa-92-mZC"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="heG-cK-vlC">
@@ -48,58 +48,52 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;number&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddM-cY-8YL">
-                                            <rect key="frame" x="164" y="8" width="80" height="21"/>
+                                            <rect key="frame" x="164" y="8" width="86" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="ySg-Xy-KQB"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UEu-e5-Ifc">
-                                            <rect key="frame" x="8" y="69" width="184" height="21"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;bus number&gt; - &lt;time&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYB-I2-rlc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="184" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="ezf-ai-inJ"/>
-                                            </constraints>
-                                        </stackView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;name&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srI-9F-n1T">
-                                            <rect key="frame" x="66" y="37" width="64" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <rect key="frame" x="66" y="37" width="358" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="358" id="Yw1-Ew-5st"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AO3-Ni-Fs0">
+                                            <rect key="frame" x="8" y="66" width="416" height="85"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="ddM-cY-8YL" firstAttribute="leading" secondItem="S0c-gr-fWg" secondAttribute="trailing" constant="8" id="0rj-bu-cby"/>
-                                        <constraint firstItem="UEu-e5-Ifc" firstAttribute="leading" secondItem="T4h-98-hOA" secondAttribute="leading" constant="8" id="4sY-n7-rzx"/>
-                                        <constraint firstItem="heG-cK-vlC" firstAttribute="leading" relation="lessThanOrEqual" secondItem="srI-9F-n1T" secondAttribute="trailing" constant="302" id="BlH-n3-Ipp"/>
+                                        <constraint firstItem="AO3-Ni-Fs0" firstAttribute="top" secondItem="srI-9F-n1T" secondAttribute="bottom" constant="8" id="AGX-ao-gLm"/>
+                                        <constraint firstItem="AO3-Ni-Fs0" firstAttribute="leading" secondItem="T4h-98-hOA" secondAttribute="leading" constant="8" id="FdV-Qg-8nU"/>
                                         <constraint firstItem="QYc-y6-D08" firstAttribute="top" secondItem="S0c-gr-fWg" secondAttribute="bottom" constant="8" id="IDR-ra-GeC"/>
                                         <constraint firstItem="srI-9F-n1T" firstAttribute="top" secondItem="ddM-cY-8YL" secondAttribute="bottom" constant="8" id="OXb-KF-78R"/>
                                         <constraint firstAttribute="trailing" secondItem="heG-cK-vlC" secondAttribute="trailing" constant="8" id="QL0-yz-med"/>
                                         <constraint firstItem="srI-9F-n1T" firstAttribute="leading" secondItem="QYc-y6-D08" secondAttribute="trailing" constant="8" id="TMG-Pp-sWA"/>
+                                        <constraint firstItem="heG-cK-vlC" firstAttribute="leading" secondItem="srI-9F-n1T" secondAttribute="trailing" constant="8" id="VrF-o9-xR4"/>
                                         <constraint firstItem="S0c-gr-fWg" firstAttribute="leading" secondItem="T4h-98-hOA" secondAttribute="leading" constant="8" id="WK5-QV-EPg"/>
+                                        <constraint firstAttribute="bottom" secondItem="AO3-Ni-Fs0" secondAttribute="bottom" constant="8" id="WU5-WW-ahN"/>
                                         <constraint firstItem="QYc-y6-D08" firstAttribute="leading" secondItem="T4h-98-hOA" secondAttribute="leadingMargin" id="dUy-Jc-hOM"/>
-                                        <constraint firstItem="UEu-e5-Ifc" firstAttribute="top" secondItem="srI-9F-n1T" secondAttribute="bottom" constant="11" id="n6F-sM-lrp"/>
+                                        <constraint firstItem="heG-cK-vlC" firstAttribute="leading" secondItem="AO3-Ni-Fs0" secondAttribute="trailing" constant="8" id="f0N-bl-jVg"/>
                                         <constraint firstItem="heG-cK-vlC" firstAttribute="centerY" secondItem="T4h-98-hOA" secondAttribute="centerY" id="uoU-Uq-00J"/>
                                         <constraint firstItem="S0c-gr-fWg" firstAttribute="top" secondItem="T4h-98-hOA" secondAttribute="top" constant="8" id="wLY-1N-wo6"/>
-                                        <constraint firstItem="heG-cK-vlC" firstAttribute="leading" relation="lessThanOrEqual" secondItem="UEu-e5-Ifc" secondAttribute="trailing" constant="240" id="xvC-kA-vvk"/>
                                         <constraint firstItem="ddM-cY-8YL" firstAttribute="top" secondItem="T4h-98-hOA" secondAttribute="top" constant="8" id="zZF-DF-qrc"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="busInfo" destination="oYB-I2-rlc" id="Ejs-xC-B7a"/>
-                                    <outlet property="bussesStackView" destination="UEu-e5-Ifc" id="umb-nh-TVP"/>
+                                    <outlet property="bussesTextView" destination="AO3-Ni-Fs0" id="slO-xt-ocA"/>
                                     <outlet property="name" destination="srI-9F-n1T" id="lbv-o4-qIk"/>
                                     <outlet property="number" destination="ddM-cY-8YL" id="iw3-gc-1gG"/>
-                                    <outlet property="stackViewHeight" destination="ezf-ai-inJ" id="rzn-UF-c96"/>
                                     <outlet property="stopImageView" destination="heG-cK-vlC" id="eI5-kS-JoI"/>
                                 </connections>
                             </tableViewCell>
@@ -109,8 +103,27 @@
                             <outlet property="delegate" destination="rAd-qS-gbb" id="SsS-B9-qtQ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Zaragoza's BusStop" id="cMe-lU-Fj6"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k5X-uy-sSg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1139" y="391"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C7Z-jB-sJI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QT7-QH-yWF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JEF-FY-vPb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rAd-qS-gbb" kind="relationship" relationship="rootViewController" id="a8g-4k-aKO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ooq-fd-mq8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="327" y="391"/>
         </scene>
