@@ -1,8 +1,8 @@
 //
-//  MappableBusInfo.swift
+//  MappableBusStopInfo.swift
 //  ZaragozaBusInfo
 //
-//  Created by Dario Carlomagno on 03/09/16.
+//  Created by Dario Carlomagno on 08/09/16.
 //  Copyright © 2016 Conichi. All rights reserved.
 //
 
@@ -12,24 +12,35 @@ import ObjectMapper
 final class MappableBusInfo: Mappable {
     
     /* row json data to parse
-     
-     "id" : "731",
-     "title" : "PLZ CANTERAS",
-     "lat" : 41.63139435772203,
-     "lon" : -0.8861435850916189,
-     "lines" : [
-     "C1"
-     ],
-     "subtitle" : "(731) C1"
-     
+     {
+     "estimates" : [
+     {
+     "line" : "C1",
+     "direction" : "COMPLEJO FUNERARIO,",
+     "estimate" : 1
+     },
+     ]
+     }
      */
     
-    var id: String?
-    var title: String?
-    var lat: Double?
-    var lon: Double?
-    var lines: [String]?
-    var subtitle: String?
+    var line: String?
+    var direction: String?
+    var estimate: Int?
+    
+    init?(_ map: Map) {
+        
+    }
+    
+    func mapping(map: Map) {
+        line <- map["line"]
+        direction <- map["direction"]
+        estimate <- map["estimate"]
+    }
+}
+
+final class MappableBusInfoResponse: Mappable {
+    
+    var estimates: [MappableBusInfo]?
     
     /*
      I assumed all of these fields as optional 'cause
@@ -41,22 +52,7 @@ final class MappableBusInfo: Mappable {
     }
     
     func mapping(map: Map) {
-        id <- map["id"]
-        title <- map["title"]
-        lat <- map["lat"]
-        lines <- map["lines"]
-        subtitle <- map["subtitle"]
+        estimates <- map["estimates"]
     }
 }
 
-final class BusInfoLocationsResponse: Mappable {
-    var locations: [MappableBusInfo]?
-    
-    init?(_ map: Map) {
-        
-    }
-    
-    func mapping(map: Map) {
-        locations <- map["locations"]
-    }
-}

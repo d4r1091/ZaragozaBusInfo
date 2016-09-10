@@ -25,7 +25,7 @@ struct NetworkManager {
             static let googleMapsBaseURL = "http://maps.googleapis.com/"
             static let googleMapsEndPoint = "maps/api/staticmap?center="
             static let googleMapsParameters = "&zoom=15&size=200x 120&sensor=true"
-            static func googleMapsImage(lat: Double, lon: Double) -> String {
+            static func googleMapsImage(lat lat: Double, lon: Double) -> String {
                 return HTTPGoogleMaps.googleMapsBaseURL+googleMapsEndPoint+String(lat)+","+String(lon)+googleMapsParameters
             }
         }
@@ -35,37 +35,31 @@ struct NetworkManager {
      as described in this post: https://swift.org/documentation/api-design-guidelines/
      */
     static func busInfoList(callback: ([MappableBusInfo]?) -> Void) {
-        Alamofire.request(.GET, HTTPEndPoints.busInfoListURL).responseObject { (response: Response<BusInfoLocationsResponse, NSError> ) -> Void in
+        Alamofire.request(.GET, HTTPEndPoints.busInfoListURL).responseObject { (response: Response<MappableBusInfoResponse, NSError> ) -> Void in
             let busInfoLocationsResponse = response.result.value
-            guard busInfoLocationsResponse?.locations?.count > 0 else {
+            guard busInfoLocationsResponse?.estimates?.count > 0 else {
                 callback(nil)
                 return
             }
-            callback(busInfoLocationsResponse?.locations)
+            callback(busInfoLocationsResponse?.estimates)
         }
     }
     
-    static func busStopInfo(id: String, callback: ([MappableBusStopEstimate]?) -> Void) {
-        Alamofire.request(.GET, HTTPEndPoints.busInfoListURL).responseObject { (response: Response<MappableBusStopInfoResponse, NSError> ) -> Void in
+    static func busStopInfo(id: String, callback: ([MappableBusStopInfo]?) -> Void) {
+        Alamofire.request(.GET, HTTPEndPoints.busInfoListURL).responseObject { (response: Response<BusInfoStopLocationsResponse, NSError> ) -> Void in
             let busStopInfoEstimatesResponse = response.result.value
-            guard busStopInfoEstimatesResponse?.estimates?.count > 0 else {
+            guard busStopInfoEstimatesResponse?.locations?.count > 0 else {
                 callback(nil)
                 return
             }
-            callback(busStopInfoEstimatesResponse?.estimates)
+            callback(busStopInfoEstimatesResponse?.locations)
         }
     }
     
-    static func busStopImage(lat: Double, lon: Double ,callback: (UIImage?)) -> Void {
-        Alamofire.request(.GET, HTTPEndPoints.HTTPGoogleMaps.googleMapsImage(lat, lon: lon))
-            .responseImage { response in
-                debugPrint(response)
-                debugPrint(response.request)
-                debugPrint(response.response)
-                debugPrint(response.result)
-                if let image = response.result.value {
-                    debugPrint("image downloaded: \(image)")
-                }
+    static func busStopInfoImageUrl(lat lat: Double?, lon: Double?) -> String {
+        guard lat != nil && lon != nil else {
+            return ""
         }
+        return HTTPEndPoints.HTTPGoogleMaps.googleMapsImage(lat: lat!, lon: lon!)
     }
 }

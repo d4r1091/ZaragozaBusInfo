@@ -11,7 +11,6 @@ target 'ZaragozaBusInfo' do
     pod 'Alamofire', '~> 3.4'
     pod 'AlamofireObjectMapper', '~> 3.0'
     pod 'AlamofireImage', '~> 2.0'
-    pod 'XCGLogger', '~> 3.5.1'
     
     target 'ZaragozaBusInfoTests' do
         inherit! :search_paths

@@ -10,16 +10,17 @@
 		2A3516DD9166336D042488B2 /* Pods_ZaragozaBusInfoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ACEF0349A85EFCBBE6916C0 /* Pods_ZaragozaBusInfoTests.framework */; };
 		2C27D9371D7B0A4B009E45FF /* BusInfosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27D9361D7B0A4B009E45FF /* BusInfosTableViewController.swift */; };
 		2C27D9391D7B0A55009E45FF /* BusInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27D9381D7B0A55009E45FF /* BusInfoTableViewCell.swift */; };
-		2C27D93B1D7B0A6B009E45FF /* BusInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27D93A1D7B0A6B009E45FF /* BusInfoModel.swift */; };
+		2C27D93B1D7B0A6B009E45FF /* BusStopInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27D93A1D7B0A6B009E45FF /* BusStopInfoModel.swift */; };
 		2C27D93F1D7B0AF2009E45FF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27D93E1D7B0AF2009E45FF /* NetworkManager.swift */; };
-		2C27D9411D7B0B56009E45FF /* MappableBusInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27D9401D7B0B56009E45FF /* MappableBusInfo.swift */; };
-		2C2DC6C61D817597003F96CB /* MappableBusStopInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DC6C51D817597003F96CB /* MappableBusStopInfo.swift */; };
+		2C27D9411D7B0B56009E45FF /* MappableBusStopInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C27D9401D7B0B56009E45FF /* MappableBusStopInfo.swift */; };
+		2C2DC6C61D817597003F96CB /* MappableBusInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2DC6C51D817597003F96CB /* MappableBusInfo.swift */; };
 		2C6B94731D7A1B1400B8E0E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6B94721D7A1B1400B8E0E0 /* AppDelegate.swift */; };
 		2C6B94781D7A1B1400B8E0E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6B94761D7A1B1400B8E0E0 /* Main.storyboard */; };
 		2C6B947A1D7A1B1400B8E0E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C6B94791D7A1B1400B8E0E0 /* Assets.xcassets */; };
 		2C6B947D1D7A1B1400B8E0E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C6B947B1D7A1B1400B8E0E0 /* LaunchScreen.storyboard */; };
 		2C6B94881D7A1B1400B8E0E0 /* ZaragozaBusInfoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6B94871D7A1B1400B8E0E0 /* ZaragozaBusInfoTests.swift */; };
-		2C8326991D842E6E00A4822B /* BusStopInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8326981D842E6E00A4822B /* BusStopInfoModel.swift */; };
+		2C8326991D842E6E00A4822B /* BusInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8326981D842E6E00A4822B /* BusInfoModel.swift */; };
+		2C83269B1D84348400A4822B /* BusInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C83269A1D84348400A4822B /* BusInfoController.swift */; };
 		D0C6547D2AD0BC2F9AD8DBCA /* Pods_ZaragozaBusInfo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0E5D3071B1A99A65009533 /* Pods_ZaragozaBusInfo.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,10 +39,10 @@
 		0D0E5D3071B1A99A65009533 /* Pods_ZaragozaBusInfo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZaragozaBusInfo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C27D9361D7B0A4B009E45FF /* BusInfosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusInfosTableViewController.swift; sourceTree = "<group>"; };
 		2C27D9381D7B0A55009E45FF /* BusInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusInfoTableViewCell.swift; sourceTree = "<group>"; };
-		2C27D93A1D7B0A6B009E45FF /* BusInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusInfoModel.swift; sourceTree = "<group>"; };
+		2C27D93A1D7B0A6B009E45FF /* BusStopInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopInfoModel.swift; sourceTree = "<group>"; };
 		2C27D93E1D7B0AF2009E45FF /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		2C27D9401D7B0B56009E45FF /* MappableBusInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappableBusInfo.swift; sourceTree = "<group>"; };
-		2C2DC6C51D817597003F96CB /* MappableBusStopInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappableBusStopInfo.swift; sourceTree = "<group>"; };
+		2C27D9401D7B0B56009E45FF /* MappableBusStopInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappableBusStopInfo.swift; sourceTree = "<group>"; };
+		2C2DC6C51D817597003F96CB /* MappableBusInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MappableBusInfo.swift; sourceTree = "<group>"; };
 		2C6B946F1D7A1B1400B8E0E0 /* ZaragozaBusInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZaragozaBusInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6B94721D7A1B1400B8E0E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C6B94771D7A1B1400B8E0E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,7 +52,8 @@
 		2C6B94831D7A1B1400B8E0E0 /* ZaragozaBusInfoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZaragozaBusInfoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6B94871D7A1B1400B8E0E0 /* ZaragozaBusInfoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZaragozaBusInfoTests.swift; sourceTree = "<group>"; };
 		2C6B94891D7A1B1400B8E0E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2C8326981D842E6E00A4822B /* BusStopInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusStopInfoModel.swift; sourceTree = "<group>"; };
+		2C8326981D842E6E00A4822B /* BusInfoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusInfoModel.swift; sourceTree = "<group>"; };
+		2C83269A1D84348400A4822B /* BusInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusInfoController.swift; sourceTree = "<group>"; };
 		34DED598B777BE21720F26A4 /* Pods-ZaragozaBusInfoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaragozaBusInfoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZaragozaBusInfoTests/Pods-ZaragozaBusInfoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		47922DDC72EAAEB877D1F708 /* Pods-ZaragozaBusInfo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaragozaBusInfo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ZaragozaBusInfo/Pods-ZaragozaBusInfo.release.xcconfig"; sourceTree = "<group>"; };
 		6621676838C51202E2D189B7 /* Pods-ZaragozaBusInfo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZaragozaBusInfo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ZaragozaBusInfo/Pods-ZaragozaBusInfo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,8 +100,8 @@
 		2C27D9321D7B0A20009E45FF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2C27D93A1D7B0A6B009E45FF /* BusInfoModel.swift */,
-				2C8326981D842E6E00A4822B /* BusStopInfoModel.swift */,
+				2C27D93A1D7B0A6B009E45FF /* BusStopInfoModel.swift */,
+				2C8326981D842E6E00A4822B /* BusInfoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,6 +109,7 @@
 		2C27D9331D7B0A20009E45FF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2C83269A1D84348400A4822B /* BusInfoController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -123,8 +126,8 @@
 		2C27D93D1D7B0AD0009E45FF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2C27D9401D7B0B56009E45FF /* MappableBusInfo.swift */,
-				2C2DC6C51D817597003F96CB /* MappableBusStopInfo.swift */,
+				2C27D9401D7B0B56009E45FF /* MappableBusStopInfo.swift */,
+				2C2DC6C51D817597003F96CB /* MappableBusInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -394,13 +397,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C27D9411D7B0B56009E45FF /* MappableBusInfo.swift in Sources */,
-				2C27D93B1D7B0A6B009E45FF /* BusInfoModel.swift in Sources */,
+				2C27D9411D7B0B56009E45FF /* MappableBusStopInfo.swift in Sources */,
+				2C27D93B1D7B0A6B009E45FF /* BusStopInfoModel.swift in Sources */,
 				2C27D9371D7B0A4B009E45FF /* BusInfosTableViewController.swift in Sources */,
 				2C27D93F1D7B0AF2009E45FF /* NetworkManager.swift in Sources */,
-				2C2DC6C61D817597003F96CB /* MappableBusStopInfo.swift in Sources */,
+				2C2DC6C61D817597003F96CB /* MappableBusInfo.swift in Sources */,
+				2C83269B1D84348400A4822B /* BusInfoController.swift in Sources */,
 				2C6B94731D7A1B1400B8E0E0 /* AppDelegate.swift in Sources */,
-				2C8326991D842E6E00A4822B /* BusStopInfoModel.swift in Sources */,
+				2C8326991D842E6E00A4822B /* BusInfoModel.swift in Sources */,
 				2C27D9391D7B0A55009E45FF /* BusInfoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

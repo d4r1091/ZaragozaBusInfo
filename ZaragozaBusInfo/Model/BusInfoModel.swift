@@ -1,20 +1,18 @@
 //
-//  BusInfoModel.swift
+//  BusStopInfoModel.swift
 //  ZaragozaBusInfo
 //
-//  Created by Dario Carlomagno on 03/09/16.
+//  Created by Dario Carlomagno on 10/09/16.
 //  Copyright © 2016 Conichi. All rights reserved.
 //
 
 import Foundation
+import UIKit
 
 struct BusInfoModel {
     
-    private(set) var id: String?
-    private(set) var title: String?
-    private(set) var lat: Double?
-    private(set) var lon: Double?
-    private(set) var lines: [String]?
-    private(set) var subtitle: String?
+    private(set) var line: String?
+    private(set) var direction: String?
+    private(set) var estimate: Int?
     
 }
