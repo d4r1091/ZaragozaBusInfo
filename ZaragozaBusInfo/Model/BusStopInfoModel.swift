@@ -22,9 +22,9 @@ struct BusStopInfoModel {
         }
         var listAsString: [String] = []
         for aBusInfo in list! {
-            let aBusInfoArrivalString = aBusInfo.line! + " - " + aBusInfo.direction! + " - " + aBusInfo.estimate!
+            let aBusInfoArrivalString = aBusInfo.line! + " - " + aBusInfo.direction! + " - " + aBusInfo.estimateAsString()
             listAsString.append(aBusInfoArrivalString)
         }
-        return []
+        return listAsString
     }
 }

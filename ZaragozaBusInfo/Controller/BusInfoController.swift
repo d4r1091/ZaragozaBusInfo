@@ -20,7 +20,7 @@ struct BusInfoController {
             for aBusInfo in busInfos! {
                 let aBusInfoObj = BusInfoModel(line: aBusInfo.line,
                                                direction: aBusInfo.direction,
-                                               estimate: "\(aBusInfo.estimate)")
+                                               estimate: aBusInfo.estimate)
                 busInfoObjects.append(aBusInfoObj)
             }
             completion(busInfoObjects)

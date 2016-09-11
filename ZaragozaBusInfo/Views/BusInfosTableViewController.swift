@@ -26,8 +26,6 @@ class BusInfosTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.estimatedRowHeight = 160
-        tableView.rowHeight = UITableViewAutomaticDimension
         // mute costraint error, if I had some plus time, I could fix this error
         NSUserDefaults.standardUserDefaults().setValue(false, forKey: "_UIConstraintBasedLayoutLogUnsatisfiable")
         fetchBusStopList()

@@ -50,7 +50,7 @@ struct NetworkManager {
             callback(nil)
             return
         }
-        Alamofire.request(.GET, HTTPEndPoints.busInfoListURL).responseObject { (response: Response<MappableBusInfoResponse, NSError> ) -> Void in
+        Alamofire.request(.GET, HTTPEndPoints.busInfoListURL+"/"+id!).responseObject { (response: Response<MappableBusInfoResponse, NSError> ) -> Void in
             let busInfoEstimatesResponse = response.result.value
             guard busInfoEstimatesResponse?.estimates?.count > 0 else {
                 callback(nil)
