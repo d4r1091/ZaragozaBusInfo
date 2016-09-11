@@ -33,7 +33,7 @@ struct BusInfoModel {
     
     func estimateAsString() -> String {
         if let estimateInt = self.estimate {
-            return "in " + "\(estimateInt)" + " '"
+            return "in " + "\(estimateInt)" + " min"
         } else {
             return "nd"
         }
